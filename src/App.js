@@ -9,7 +9,7 @@ import './App.css';
 
 const App = () => {
   const [image, setImage] = useState(null);
-  const [brushSize, setBrushSize] = useState(5);
+  const [brushSize, setBrushSize] = useState(3);
   const [canvasRef, setCanvasRef] = useState(null);
   const [maskImage, setMaskImage] = useState(null);
   const [zoom, setZoom] = useState(1);
@@ -36,7 +36,8 @@ const App = () => {
     reader.onload = () => {
       const imageData = reader.result;
       localStorage.removeItem('image');
-        setMaskImage(null)
+      setMaskImage(null)
+      clearCanvas();
       localStorage.removeItem('maskImage');
       
       setImage(imageData);
