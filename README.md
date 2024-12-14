@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+Technologies Used
+Frontend:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React: JavaScript library for building user interfaces.
+Material-UI (MUI): UI framework for React with pre-designed components.
+react-dropzone: Dropzone for handling file uploads.
+react-canvas-draw: Canvas drawing library for React.
+Styling:
 
-## Available Scripts
+MUI for responsive design and theming.
+State Management:
 
-In the project directory, you can run:
+React useState for managing state locally.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+GitHub repository link: https://github.com/Ayushcodekid/Image-masking-task.git
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+How to run the project locally
 
-### `npm run build`
+1. Clone the repository:  
+git clone https://github.com/your-username/image-masking-app.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navigate to the project directory: 
+cd image-masking-app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install dependencies: 
+npm install react-scripts --force   (im having to use --force , as ther is some issue regarding npm)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Start the development server:
+npm start
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Usage
+Upload an image:
+Drag and drop an image file onto the dropzone or click to select an image.
 
-## Learn More
+Edit the image:
+Draw on the image using the drawing tools.
+Adjust brush size using the respective buttons.
+Use the zoom in and zoom out buttons to modify the canvas view.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Save the image with drawing:
+Click on the save icon to save the current canvas state as an image file.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Clear/Reset the canvas:
+Clear the current drawing using the "Clear" button.
+Reset the entire application to its initial state using the "Reset" button.
 
-### Code Splitting
+Local Storage Integration:
+The application stores the uploaded image, mask, and canvas data in localStorage.
+When you upload a new image, previous image data is cleared from localStorage to ensure only the latest data is persisted.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+Libraries Used
+react-canvas-draw: Provides the drawing functionality on the canvas.
+react-dropzone: Simplifies the file drop handling process.
+material-ui/core: For MUI components (buttons, icons, etc.).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Challenges Faced
+State Management:
+Managing states for image, brush size, and canvas drawing across components.
+Implementing persistent state using localStorage and ensuring old data is cleared before saving new data.
+Responsive Design:
+Ensuring the UI adapts to different screen sizes, especially for the canvas and controls.
+Performance:
+Optimizing canvas drawing operations to maintain smooth performance, especially with high-resolution images.
