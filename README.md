@@ -26,7 +26,7 @@ git clone https://github.com/your-username/image-masking-app.git
 cd image-masking-app
 
 3. Install dependencies: 
-npm install react-scripts --force   (im having to use --force , as ther is some issue regarding npm)
+npm install react-scripts --force   (im having to use --force , as there is some issue regarding npm)
 
 4. Start the development server:
 npm start
